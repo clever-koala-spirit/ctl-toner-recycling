@@ -129,6 +129,12 @@
             box-shadow: 0 5px 15px rgba(220, 227, 76, 0.3);
         }
 
+        .btn-lg {
+            padding: 14px 32px;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+
         .btn-outline {
             background: transparent;
             color: #131110;
@@ -1226,7 +1232,7 @@
         footer {
             background: #2a2926;
             color: #ffffff;
-            padding: 60px 40px 30px;
+            padding: 60px 40px 80px;
         }
 
         .footer-content {
@@ -1618,7 +1624,8 @@
             <img src="logo.png" alt="Close the Loop Logo" onclick="window.location.hash='hero'">
         </div>
         <div class="nav-ctas">
-            <button class="btn btn-primary" onclick="window.location.hash='signup'">Join Free</button>
+            <a href="tel:1800242473" style="font-size:13px; font-weight:600; color:#131110; white-space:nowrap;">📞 1800 24 2473</a>
+            <button class="btn btn-primary" onclick="window.location.hash='signup'">Get Free Box</button>
             <button class="btn btn-outline" onclick="window.location.href='https://members.closetheloop.com.au'">Log In</button>
         </div>
     </nav>
@@ -1626,25 +1633,26 @@
     <main id="main-content">
         <!-- Hero Section -->
         <section class="hero" id="hero">
-            <div class="free-strip">✅ 100% FREE for businesses — no cost, no contracts</div>
+            <div class="free-strip">✅ 100% FREE — no cost, no contracts, no minimum</div>
             <h1>Your Toner Cartridges<br>Deserve Better Than <span class="highlight">Landfill</span></h1>
+            <p class="subtext">Sign up in 60 seconds. We send the box. You fill it. We collect it. That's it.</p>
             <div class="how-it-works-mini">
-                <div class="step"><span class="icon">📦</span> We send you a free box &amp; bags</div>
-                <div class="step"><span class="icon">📅</span> You book a collection date</div>
+                <div class="step"><span class="icon">📦</span> Free box &amp; bags sent to you</div>
+                <div class="step"><span class="icon">📅</span> Book a collection date</div>
                 <div class="step"><span class="icon">🚛</span> We pick it up — done</div>
             </div>
             <div class="hero-ctas">
-                <button class="btn btn-primary" onclick="window.location.hash='signup'">Sign Up Free — Get Your Collection Box</button>
-                <button class="btn btn-outline-white" onclick="window.location.href='https://members.closetheloop.com.au'">Already Registered? Book a Collection</button>
+                <button class="btn btn-primary btn-lg" onclick="window.location.hash='signup'">Get Your Free Collection Box →</button>
             </div>
-            <p class="trust-avatars">👥 Join 70,000+ organisations</p>
+            <p class="trust-avatars">Trusted by <strong>70,000+</strong> Australian organisations · ASX-listed (CLG) · 97% recovery rate</p>
             <div class="hero-image">
-                <img src="banner.png" alt="Toner Cartridge Recycling Process">
+                <img src="banner.png" alt="Toner Cartridge Recycling Process" loading="eager">
             </div>
         </section>
 
         <!-- Trust Bar -->
         <div class="trust-bar">
+            <p style="text-align:center; font-size:12px; font-weight:600; color:#999; text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;">We accept cartridges from every major brand</p>
             <div class="marquee-container">
                 <span class="marquee-item">HP</span>
                 <span class="marquee-item">Canon</span>
@@ -1724,53 +1732,73 @@
                 <h3>Your cartridges become roads, pens, and new products.</h3>
             </div>
             <div class="section-center">
-                <button class="btn btn-primary" onclick="window.location.hash='signup'" style="font-size: 16px; padding: 14px 32px;">Start Your Free Program Now</button>
+                <button class="btn btn-primary btn-lg" onclick="window.location.hash='signup'" style="font-size: 16px; padding: 14px 32px;">Get Your Free Collection Box →</button>
             </div>
         </section>
 
-        <!-- Video Section -->
-        <section class="video-section">
-            <h2>See How We Transform Waste Into Resources</h2>
-            <div class="video-player"></div>
-            <p class="video-info">Presented by Steve Morris, Head of Circular Economy & Founder</p>
-            <span class="duration-badge">3:45</span>
+        <!-- Social Proof Banner -->
+        <section class="social-proof-banner" style="background:#DCE34C; padding:20px 40px; text-align:center;">
+            <p style="font-weight:700; font-size:15px; color:#131110; margin:0;">Trusted by government departments, law firms, healthcare providers, schools &amp; corporates Australia-wide</p>
+        </section>
+
+        <!-- Testimonials Section (moved above form for social proof) -->
+        <section class="testimonials-section">
+            <h2>What Our Partners Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Close the Loop made our sustainability reporting effortless. The ESG data is exactly what we needed for compliance."</p>
+                    <strong>Legal & Accounting Firm</strong>
+                    <em>350+ cartridges/month</em>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"As a government agency, sustainability is core to our mission. This program is perfect for our environmental goals."</p>
+                    <strong>Government Department</strong>
+                    <em>500+ cartridges/month</em>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The whole process is seamless — from signup to collection to reporting. Highly recommend to any healthcare organisation."</p>
+                    <strong>Healthcare Provider</strong>
+                    <em>280+ cartridges/month</em>
+                </div>
+            </div>
         </section>
 
         <!-- Signup Form -->
         <section class="signup-section" id="signup">
             <div class="signup-form">
-                <h2>Start Your Free Program</h2>
+                <h2>Get Your Free Collection Box</h2>
+                <p style="text-align:center; color:#666; font-size:14px; margin-bottom:24px;">Takes 60 seconds. No credit card. No commitments.</p>
                 <form id="signupForm">
                     <div class="form-group">
                         <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company" required>
+                        <input type="text" id="company" name="company" placeholder="e.g. Smith & Partners" required>
                     </div>
                     <div class="form-group">
-                        <label for="contact">Contact Name</label>
-                        <input type="text" id="contact" name="contact" required>
+                        <label for="contact">Your Name</label>
+                        <input type="text" id="contact" name="contact" placeholder="e.g. Jane Smith" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">Work Email</label>
+                        <input type="email" id="email" name="email" placeholder="jane@company.com.au" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cartridges">Estimated Monthly Cartridges</label>
-                        <input type="number" id="cartridges" name="cartridges" min="0" required>
+                        <label for="phone">Phone <span style="color:#999; font-weight:400;">(optional)</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="04XX XXX XXX">
                     </div>
                     <div class="form-cta">
-                        <button type="submit" class="btn btn-primary" style="font-size: 16px; padding: 14px 32px;">Start Your Free Program</button>
+                        <button type="submit" class="btn btn-primary btn-lg" style="width:100%; font-size: 16px; padding: 16px 32px;">Get My Free Collection Box →</button>
+                        <p style="font-size:12px; color:#999; margin-top:12px; text-align:center;">We'll contact you within 24 hours to arrange delivery</p>
                     </div>
                 </form>
                 <div class="form-success" id="formSuccess">
-                    <h3>🎉 Welcome to Close the Loop!</h3>
-                    <p>We'll be in touch within 24 hours to arrange your free collection box.</p>
+                    <h3>🎉 You're in!</h3>
+                    <p>We'll be in touch within 24 hours to arrange your free collection box delivery.</p>
                 </div>
                 <div class="form-link">
-                    Already registered? <a href="https://members.closetheloop.com.au">Log in to your portal →</a>
+                    Already a member? <a href="https://members.closetheloop.com.au">Log in to book a collection →</a>
                 </div>
             </div>
         </section>
@@ -1844,6 +1872,19 @@
                     <h3>✏️ Enviroliner Pens</h3>
                 </div>
             </div>
+        </section>
+
+        <!-- Video / How It Works -->
+        <section class="video-section">
+            <h2>See How It Works</h2>
+            <div class="video-player" style="cursor:pointer;" onclick="window.open('https://closetheloop.com.au','_blank')">
+                <div style="color:#fff; text-align:center; padding:20px;">
+                    <div style="width:80px; height:80px; background:#DCE34C; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:36px;">▶</div>
+                    <p style="font-size:16px; font-weight:600;">Watch: How Close the Loop Transforms Waste Into Roads</p>
+                    <span class="duration-badge">3:45</span>
+                </div>
+            </div>
+            <p class="video-info" style="margin-top:15px;">Presented by Steve Morris, Head of Circular Economy & Founder</p>
         </section>
 
         <!-- Portal Mockup -->
@@ -1958,6 +1999,12 @@
             </div>
         </section>
 
+        <!-- Mid-page CTA -->
+        <section style="background:#131110; padding:40px; text-align:center;">
+            <button class="btn btn-primary btn-lg" onclick="window.location.hash='signup'" style="font-size:16px; padding:16px 40px;">Get Your Free Collection Box →</button>
+            <p style="margin-top:12px; font-size:13px; color:rgba(255,255,255,0.5);">No cost · No contracts · Takes 60 seconds</p>
+        </section>
+
         <!-- ESG Reporting Section -->
         <section class="esg-section" id="esg">
             <h2>ESG Reporting Dashboard</h2>
@@ -1991,31 +2038,6 @@
                             <div class="value">8.5M L</div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials-section">
-            <h2>What Our Partners Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Close the Loop made our sustainability reporting effortless. The ESG data is exactly what we needed for compliance."</p>
-                    <strong>Legal & Accounting Firm</strong>
-                    <em>350+ cartridges/month</em>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"As a government agency, sustainability is core to our mission. This program is perfect for our environmental goals."</p>
-                    <strong>Government Department</strong>
-                    <em>500+ cartridges/month</em>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"The whole process is seamless — from signup to collection to reporting. Highly recommend to any healthcare organisation."</p>
-                    <strong>Healthcare Provider</strong>
-                    <em>280+ cartridges/month</em>
                 </div>
             </div>
         </section>
@@ -2108,12 +2130,13 @@
 
         <!-- Final CTA -->
         <section class="final-cta">
-            <h2>Ready to Close the Loop?</h2>
-            <p style="margin-bottom: 30px; font-size: 18px;">Join 70,000+ organisations diverting cartridges from landfill.</p>
+            <h2>Stop Sending Cartridges to Landfill</h2>
+            <p style="margin-bottom: 10px; font-size: 18px;">It's free. It takes 60 seconds. And we handle everything.</p>
+            <p style="margin-bottom: 30px; font-size: 14px; color: rgba(255,255,255,0.6);">Join 70,000+ organisations already recycling with Close the Loop.</p>
             <div class="ctas">
-                <button class="btn btn-primary" onclick="window.location.hash='signup'" style="font-size: 16px; padding: 14px 32px;">Sign Up Free Now</button>
-                <button class="btn btn-outline-white" onclick="window.location.href='https://members.closetheloop.com.au'" style="font-size: 16px; padding: 14px 32px;">Log In to Portal</button>
+                <button class="btn btn-primary btn-lg" onclick="window.location.hash='signup'" style="font-size: 18px; padding: 18px 40px;">Get Your Free Collection Box →</button>
             </div>
+            <p style="margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.5);">No credit card · No contracts · Cancel anytime</p>
         </section>
     </main>
 
@@ -2169,7 +2192,7 @@
     <!-- Floating Sticky Bar -->
     <div class="mobile-sticky" id="mobileSticky">
         <a href="tel:1800242473" class="phone-link">📞 1800 24 2473</a>
-        <button class="btn btn-primary" onclick="window.location.hash='signup'" style="flex: 0;">Sign Up Free</button>
+        <button class="btn btn-primary" onclick="window.location.hash='signup'" style="flex: 0;">Get Free Box</button>
         <button class="btn btn-outline" onclick="window.location.href='https://members.closetheloop.com.au'" style="flex: 0;">Log In</button>
     </div>
 
